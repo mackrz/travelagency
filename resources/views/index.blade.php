@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Podróże na kraniec świata</title>
+        <title>{{ Voyager::setting('title') }}</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
@@ -35,19 +35,18 @@
         <!-- Main Content-->
         <div class="container px-4 px-lg-5 flex">
             <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="col-md-10 col-lg-8 col-xl-7 d-flex news">
                     <!-- Post preview-->
-                   
                     @foreach($news as $row)
                       @include('partials.news_rows', ['row' => $row])
                     @endforeach
-                    
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
                 </div>
+                <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="/news/">Zobacz więcej →</a></div>
             </div>
+            <!-- Gallery-->
+            @foreach($gallery as $image)
+                @include('partials.imageGallery', ['image' => $image])
+            @endforeach
         </div>
          <!-- Footer-->
        @include('partials.footer')

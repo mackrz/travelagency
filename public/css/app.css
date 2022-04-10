@@ -1,4 +1,10 @@
-
+.d-flex{
+  display: flex;
+}
+.news{
+  justify-content: space-around;
+  margin:auto;
+}
 .navbar {
     position: relative;
     display: flex;

@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', 'NewsController@index');
+// podgląd pojedynczego wpisu
+Route::get('news/{slug}', 'NewsController@art');
+// podgląd wszystkich postów
+Route::get('news/', 'NewsController@showPosts');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
