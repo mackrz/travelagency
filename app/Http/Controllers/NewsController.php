@@ -3,9 +3,12 @@
 
 namespace App\Http\Controllers;
 
+use Response;
 use Illuminate\Http\Request;
+
 use App\Models\Post;
 use App\Newgallery;
+
 class NewsController extends Controller
 {
     // głowna strona
@@ -34,4 +37,5 @@ class NewsController extends Controller
         $post = Post::findBySlug($slug);
         return view('post.art', ['post' => $post]);
     }
+   
 }
