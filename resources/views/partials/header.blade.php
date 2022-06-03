@@ -19,5 +19,6 @@
         <link rel='stylesheet' href= "{{ asset('/js/jquery/unitegallery/css/unite-gallery.css') }}" type='text/css' />
         
         <script type='text/javascript' src="{{ asset('/js/jquery/unitegallery/themes/tiles/ug-theme-tiles.js') }}"></script>
+        <script src="https://kit.fontawesome.com/1be28eb531.js" crossorigin="anonymous"></script>
 
     </head>

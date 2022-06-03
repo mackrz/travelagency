@@ -6,26 +6,17 @@
                 <ul class="footer-list list-inline text-center">
                     <li class="list-inline-item">
                         <a href="#!">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
+                            <i class="fa-brands fa-facebook"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
                         <a href="#!">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                            </span>
+                            <i class="fa-brands fa-github"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
                         <a href="#!">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
+                          <i class="fa-brands fa-twitter"></i>
                         </a>
                     </li>
                 </ul>

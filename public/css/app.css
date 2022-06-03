@@ -517,6 +517,15 @@ header.masthead .post-heading .meta a {
 .post-preview{
   max-width: 80% !important;
   margin: 10px auto;
+  padding:15px;
+  background-color: #212529;
+}
+.gallery-title{
+  margin:20px auto;
+  text-align: center;
+}
+.margin-bottom{
+  margin-bottom: 3%;
 }
 .post-preview a{
   line-height: 20px;
@@ -652,7 +661,33 @@ header.masthead .site-heading .h1 {
 }
 
 .posts-rows{
+  margin-top: 1%;
   text-align: center;
+}
+.info-content{
+  justify-content: center;
+  margin: 3% auto;
+  display: flex;
+}
+.info-box{
+  border-radius: 5px;
+  padding:10px 5px;
+  text-align: center;
+  margin: 0 20px;
+  background-color: #212529;
+  width: 20%;
+}
+.info-box .fa-solid{
+  color: #3da1f9;
+  font-size: 48px;
+}
+.info-box p{
+  color: #dee2e6;
+  font-size: 16px;
+}
+.footer-list li{
+  font-size: 24px;
+  padding: 0 5px;
 }
 @media (min-width: 992px) {
   #mainNav {

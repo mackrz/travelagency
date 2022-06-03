@@ -18,8 +18,8 @@
         </header>
         <!-- Main Content-->
         <div class="container px-4 px-lg-5 flex">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7 d-flex news">
+            <div class="margin-bottom row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7 d-flex news margin-bottom">
                     <!-- Post preview-->
                     @foreach($news as $row)
                       @include('partials.news_rows', ['row' => $row])
@@ -27,7 +27,10 @@
                 </div>
                 <div class="d-flex btn-read-more justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="/news/readmore">Zobacz więcej →</a></div>
             </div>
+             <!-- info-->
+            @include('info')
             <!-- Gallery-->
+            <h2 class="gallery-title">Galeria zdjęć</h2>
             <div  class="post-preview" id="gallery" style="display:none;">
             @foreach($gallery as $image)
                  <img alt ="{{$image -> tittle}}" src = "{{asset('/storage/'.$image -> image)}}" data-image= "{{asset('/storage/'.$image -> image)}}" style="display:none; ">
