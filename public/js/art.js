@@ -1,4 +1,4 @@
-
+// Rezerwacja
 $(document).ready(function(){
 
     $("#reservation_start").datepicker({
@@ -13,11 +13,11 @@ $(document).ready(function(){
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
-        
+
         event.preventDefault();
 
         var url = $(this).attr('data-action');
-        
+
         $.ajax({
             url: url,
             method: 'POST',
