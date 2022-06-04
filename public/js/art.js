@@ -30,12 +30,12 @@ $(document).ready(function(){
             {
                 $(form).trigger("reset");
                 if(response == true)
-                    alert('Rezerwacja dokonana pomyślnie')
+                    window.location.replace("http://127.0.0.1:8000/successReservation");
                 else
                     alert('Przepraszamy wystąpił błąd')
             },
             error: function(response) {
-                alert('Przepraszamy wystąpił błąd')
+                alert('Przepraszamy wystąpił błąd!')
             }
         });
     });

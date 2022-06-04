@@ -34,3 +34,4 @@
 
     <a href ="{{ url()->previous() }}">Wróć</a>
 </div>
+@include('partials.footer')

@@ -3,6 +3,80 @@ body{
   background-color: #121212;
   color:white;
 }
+ /* menu profil */
+ .action_profile{
+  position:fixed;
+  top: 10px;
+  right: 30px;
+ }
+ .action_profile .profile{
+   position: relative;
+   width:50px;
+   height:50px;
+   border-radius: 50%;
+   overflow: hidden;
+   cursor:pointer;
+  }
+  .action_profile .profile img{
+    position: absolute;
+    top:0; 
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .action_profile .menu_profile{
+    position: absolute;
+    top:80px;
+    right: -10px;
+    padding: 10px;
+    background-color: #dee2e6;
+    width: 200px;
+    box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .action_profile .menu_profile.active{
+    top:80px;
+    visibility: visible;
+    opacity: 1;
+  }
+  .action_profile .menu_profile::before{
+    content: '';
+    position: absolute;
+    top:-5px;
+    right: 28px;
+    width: 20px;
+    height: 50px;
+    background-color: #dee2e6;
+    transform: rotate(45deg);
+  }
+  .action_profile .menu_profile h3{
+    text-align: center;
+    padding: 10px 0;
+    color:#555;
+  }
+  .action_profile .menu_profile ul li{
+    list-style: none;
+    padding:  0;
+    display: flex;
+    align-items: center;
+  }
+  .action_profile .menu_profile ul li i{
+    color:#0087ca;
+    padding:5px 5px 5px 0;
+  }
+  .action_profile .menu_profile ul li a{
+    display:inline-block;
+    text-decoration: none;
+    color:#555;
+    transition: 0.5s;
+  }
+  .action_profile .menu_profile ul li:hover a{
+    color:#0087ca;
+  }
 .d-flex{
   display: flex;
 }
@@ -57,7 +131,10 @@ body{
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
-  
+  .container_news{
+    width: 90%;
+    margin: auto;
+  }
   .navbar-collapse {
     flex-basis: 100%;
     flex-grow: 1;
@@ -213,7 +290,7 @@ body{
       overflow-y: visible;
     }
   }
-  @media (min-width: 992px) {
+  
     .navbar-expand-lg {
       flex-wrap: nowrap;
       justify-content: flex-start;
@@ -265,7 +342,7 @@ body{
       padding: 0;
       overflow-y: visible;
     }
-  }
+  
   @media (min-width: 1200px) {
     .navbar-expand-xl {
       flex-wrap: nowrap;
@@ -453,10 +530,11 @@ body{
   margin-bottom: 3rem;
   padding-top: calc(8rem + 57px);
   padding-bottom: 8rem;
-  background: no-repeat center center;
+  background-repeat: round;
   background-color: #6c757d;
   background-size: cover;
-  background-attachment: scroll;
+  background-attachment: fixed;
+  background-position-y: bottom;
 }
 header.masthead:before {
   content: "";
@@ -595,7 +673,7 @@ a.page-link{
 .footer-copyright{
 float: right;
 }
-@media (min-width: 992px) {
+
   header.masthead {
     padding-top: 12.5rem;
     padding-bottom: 12.5rem;
@@ -611,7 +689,7 @@ header.masthead .site-heading .h1 {
   header.masthead .post-heading .subheading {
     font-size: 1.875rem;
   }
-}
+
 
 #mainNav {
   background: #212529;
@@ -659,7 +737,18 @@ header.masthead .site-heading .h1 {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
+.res_reservation{
+  margin:2%;
+  color:#dee2e6;
+}
+.content_res{
+  margin: auto;
+  text-align: center;
+}
+.res_reservation h1{
+  text-align: center;
+  margin: 2% auto;
+ }
 .posts-rows{
   margin-top: 1%;
   text-align: center;
@@ -689,12 +778,26 @@ header.masthead .site-heading .h1 {
   font-size: 24px;
   padding: 0 5px;
 }
-@media (min-width: 992px) {
+.test{
+  border-radius: 15px;
+  background-image: linear-gradient(to right,#147aad,#104b64);
+  width: 20%;
+  margin: auto;
+  padding: 2%;
+  margin-bottom: 2%;
+}
+.btn_search{
+  border:none;
+  background-color: #cfcfcf;
+}
+.btn_search:hover{
+  cursor: pointer;
+}
   #mainNav {
     border-bottom: 1px solid transparent;
   }
-}
-@media (min-width: 992px) {
+
+
   #mainNav {
     transition: background-color 0.2s;
     /* Force Hardware Acceleration in WebKit */
@@ -714,4 +817,39 @@ header.masthead .site-heading .h1 {
     /* if the user changes the scrolling direction, we show the header */
     transform: translate3d(0, 100%, 0);
   }
+  .my_reservation{
+    margin: 2% auto;
+    text-align: -webkit-center;
+  }
+  .my_reservation table, th, td {
+    padding: 15px 35px;
+    border: 1px solid #104b64;
+    border-collapse: collapse;
+  }
+  .my_reservation th{
+    background-color: #0087ca;
+  }
+  .my_reservation tr:nth-child(odd){
+    background-color: #104b64;
+  }
+  .my_reservation a{
+    text-decoration: none;
+    color: white;
+  }
+  .my_reservation a:hover{
+    text-decoration: none;
+    color: #0087ca;
+  }
+  .my_reservation_image{
+  margin-top: 20px;
+  opacity: 0.8;
+  z-index: -1;
+ width: 748px;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../storage/tropical.jpg);
+  }
+  .swiper-container {
+    width: 100%;
+    height: 300px;
 }
