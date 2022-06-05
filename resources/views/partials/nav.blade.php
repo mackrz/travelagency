@@ -18,9 +18,9 @@
         <div class="menu_profile">
             <h3>Moje konto</h3>
             <ul>              
-                <li><i class="fa-solid fa-pen-to-square"></i><a href="#">Edytuj profil</a></li>
+                <li><i class="fa-solid fa-pen-to-square"></i><a href="/admin/users">Edytuj profil</a></li>
                 <li><i class="fa-solid fa-circle-check"></i><a href="{{ url('/account/myreservation') }}">Rezerwacje</a></li>
-                <li><i class="fa-solid fa-gear"></i><a href="#">Ustawienia konta</a></li>
+                <li><i class="fa-solid fa-gear"></i><a href="/admin/settings">Ustawienia konta</a></li>
                 <li><i class="fa-solid fa-right-from-bracket"></i><a href="#">Wyloguj</a></li>
             </ul>
         </div>

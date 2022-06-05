@@ -830,7 +830,10 @@ header.masthead .site-heading .h1 {
     background-color: #0087ca;
   }
   .my_reservation tr:nth-child(odd){
-    background-color: #104b64;
+    background-color: #7f858b;
+    opacity: 0.9;
+    color: white;
+    backdrop-filter: blur(7px);
   }
   .my_reservation a{
     text-decoration: none;
